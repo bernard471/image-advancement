@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Removal</title>
+<style>
+  .preview, .result {
+    margin: 20px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="SidebarLayout_content">
+  <main>
+    <div class="gap-3">
+      <section class="upsection">
+        <div class="color-primary20">
+          <div>
+            <div class="mw480-d-flex align-items-center justify-content-between">
+              <h1>Background Removal</h1>
+            </div>
+            <p class="Accordion_description">Remove the background of an image quickly and automatically with zero clicks. 
+              Our background removal AI can handle a wide range of pictures of different subjects.</p>
+          </div>
+        </div>
+      </section>
+      <div class="DashboardToolLayout_columnsWrapper">
+        <div class="DashboardToolLayout_toolsColumnWrapper">
+          <section class="flex-basis-50 mt-3 DashboardToolLayout_tool flex-grow-1">
+            <div class="mx-a w-100">
+              <div class="m-4 d-flex">
+                <div class="demo_fileZone">
+                  <div class="text-center mt-3">
+                    <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="previewImage(event)">
+                    <span class="btn" onclick="document.getElementById('fileInput').click()">Upload image</span>
+                    <p>or drag and drop an image</p>
+                    <div class="color-grey50 text-center fs-small lh-small">
+                      Your file might be resized and converted before upload.
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <div class="preview" id="previewContainer">
+              <h3>Preview:</h3>
+              <img id="previewImage" src="" alt="Image Preview" style="max-width: 100%;">
+            </div>
+          </section>
+          <section class="DashboardToolLayout_tool DashboardToolLayout_middleColumn flex-basis-50 mt-3 flex-grow-1">
+            <div class="result" id="resultContainer">
+              <h3>Result:</h3>
+              <img id="resultImage" src="" alt="Result Image" style="max-width: 100%;">
+            </div>
+          </section>
+        </div>
+        <section>
+          <div class="download" id="downloadContainer">
+            <button id="downloadBtn" style="display: none;" onclick="downloadImage()">Download Image</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+const API_KEY = 'o5PU1WwLgvAsquqgsFXomcfc'; // Replace with your actual API key
+const API_URL = 'https://api.example.com/remove-bg'; // Replace with your actual API URL
+
+function previewImage(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('previewImage').src = e.target.result;
+      processImage(file);
+    };
+    reader.readAsDataURL(file);
+  }
+}
+
+function processImage(file) {
+  const formData = new FormData();
+  formData.append('image_file', file);
+
+  fetch(API_URL, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${API_KEY}`
+    },
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      document.getElementById('resultImage').src = data.image_url;
+      document.getElementById('downloadBtn').style.display = 'block';
+      document.getElementById('downloadBtn').setAttribute('data-url', data.image_url);
+    } else {
+      alert('Failed to remove background.');
+    }
+  })
+  .catch(error => console.error('Error:', error));
+}
+
+function downloadImage() {
+  const url = document.getElementById('downloadBtn').getAttribute('data-url');
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'processed-image.png';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+</script>
+
+</body>
+</html>

@@ -52,9 +52,3 @@ if (window.innerWidth < 768) {
   sidebar.classList.remove("close");
 }
 
-const menuTitleElement = document.querySelector('.menu_title.menu_dahsboard');
-const pageLink = menuTitleElement.getAttribute('data-page-link');
-
-menuTitleElement.addEventListener('click', () => {
-  window.location.href = pageLink;
-});

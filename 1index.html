@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="2style.css">
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="logo_item">
+      <i class="bx bx-menu" id="sidebarOpen"></i>
+      <a href="index1.html">
+        <img src="logo.png" alt="ImageLab">ImageLab
+      </a>
+    </div>
+
+    <div class="search_bar">
+      <input type="text" placeholder="Search" />
+    </div>
+
+    <div class="navbar_content">
+      <i class="bi bi-grid"></i>
+      <i class='bx bx-sun' id="darkLight"></i>
+      <img src="profile.jpg" alt="" class="profile" />
+    </div>
+  </nav>
+
+  <!-- sidebar -->
+  <nav class="sidebar">
+    <div class="menu_content">
+      <ul class="menu_items">
+        <li class="item">
+          <a href="combined.html" class="nav_link submenu_item">
+            <span class="navlink_icon">
+              <i class='bx bxs-dashboard'></i>
+            </span>
+            <span class="navlink">Dashboard</span>
+          </a>
+
+        <li class="item">
+          <div href="combined.html" class="nav_link submenu_item">
+            <span class="navlink_icon">
+              <i class='bx bxs-user-account'></i>
+            </span>
+            <span class="navlink">Account</span>
+            <i class="bx bx-chevron-right arrow-left"></i>
+          </div>
+
+          <ul class="menu_items submenu">
+            <a href="#" class="nav_link sublink">Profile</a>
+            <a href="#" class="nav_link sublink">Settings</a>
+            <a href="#" class="nav_link sublink">Billing</a>
+          </ul>
+        </li>
+        <!-- end -->
+
+        <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+        <!-- start -->
+        <li class="item">
+          <div href="#" class="nav_link submenu_item">
+            <span class="navlink_icon">
+              <i class="bx bx-grid-alt"></i>
+            </span>
+            <span class="navlink">Tools</span>
+            <i class="bx bx-chevron-right arrow-left"></i>
+          </div>
+
+          <ul class="menu_items submenu">
+            <a href="4index.html" class="nav_link sublink">Inpainting</a>
+            <a href="1index.html" class="nav_link sublink">Background Removal</a>
+            <a href="6index.html" class="nav_link sublink">Auto Fix</a>
+            <a href="5index.html" class="nav_link sublink">Style Transfer</a>
+            <a href="7index.html" class="nav_link sublink">Low Light Enhancement</a>
+            <a href="10index.html" class="nav_link sublink">Super Resolution</a>
+            <a href="8index.html" class="nav_link sublink">Auto Image Captioning</a>
+            <a href="9index.html" class="nav_link sublink">Auto Image Tagging</a>
+          </ul>
+        </li>
+        <!-- end -->
+
+        <!-- start -->
+        <li class="item">
+          <div href="#" class="nav_link submenu_item">
+            <span class="navlink_icon">
+              <i class='bx bx-data'></i>
+            </span>
+            <span class="navlink">API</span>
+            <i class="bx bx-chevron-right arrow-left"></i>
+          </div>
+
+          <ul class="menu_items submenu">
+            <a href="#" class="nav_link sublink">Documentation</a>
+            <a href="#" class="nav_link sublink">Pricing</a>
+          </ul>
+        </li>
+        <!-- end -->
+      </ul>
+
+      <ul class="menu_items">
+
+        <!-- duplicate these li tag if you want to add or remove navlink only -->
+        <!-- Start -->
+        <li class="item">
+          <a href="#" class="nav_link">
+            <span class="navlink_icon">
+              <i class='bx bx-log-in'></i>
+            </span>
+            <span class="navlink">Logout</span>
+          </a>
+        </li>
+        <!-- End -->
+
+
+        <!-- Sidebar Open / Close -->
+        <div class="bottom_content">
+          <div class="bottom expand_sidebar">
+            <span> Expand</span>
+            <i class='bx bx-log-in'></i>
+          </div>
+          <div class="bottom collapse_sidebar">
+            <span> Collapse</span>
+            <i class='bx bx-log-out'></i>
+          </div>
+        </div>
+    </div>
+  </nav>
+  <!-- JavaScript -->
+
+
+  <div class="SidebarLayout_content">
+    <main>
+      <div class="gap-3">
+        <section class="upsection ">
+          <div class="color-primary20">
+            <div>
+              <div class="mw480-d-flex align-items-center justify-content-between">
+                <h1>Background Removal</h1>
+
+              </div>
+              <p class="Accordion_description">Remove the background of an image quickly and automatically with zero
+                clicks.
+                Our background removal AI can handle a wide range of pictures of different subjects.</p>
+            </div>
+          </div>
+        </section>
+        <div class="DashboardToolLayout_columnsWrapper">
+          <div class="DashboardToolLayout_toolsColumnWrapper">
+            <section class="flex-basis-50 mt-3 DashboardToolLayout_tool flex-grow-1">
+              <div class="mx-a w-100">
+                <div class="m-4 d-flex">
+                  <div class="demo_fileZone">
+                    <img id="imageFile" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yO
+                    iBBZG9iZSBJbGx1c3RyYXRvciAyNS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjx
+                    zdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0
+                    cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA5MiAxMTQiIHN0eWxlPSJlbmFibGUtYmF
+                    ja2dyb3VuZDpuZXcgMCAwIDkyIDExNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbG
+                    w6I0ZGRkZGRjtzdHJva2U6Izg1NzFGRjt9DQoJLnN0MXtmaWxsOiNGRUZFRkU7c3Ryb2tlOiM4NTcxRkY7fQ0KCS5zdDJ7ZmlsbDpub25lO3N0cm
+                    9rZTojODU3MUZGO3N0cm9rZS13aWR0aDoxLjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO30NCgkuc3Qze2Zpb
+                    Gw6Izg1NzFGRjtzdHJva2U6Izg1NzFGRjt9DQo8L3N0eWxlPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTUuNSwxMC42aDY3LjVjMi41LDAsNC41
+                    LDIsNC41LDQuNXY5My44YzAsMi41LTIsNC41LTQuNSw0LjVINS41Yy0yLjUsMC00LjUtMi00LjUtNC41VjE1LjENCglDMSwxMi42LDMsMTAuNiw1L
+                    jUsMTAuNnoiLz4NCjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xOC4xLDAuN2g1OS40djguNmMwLDAuMywwLDAuNSwwLDAuOGwwLDBjMCwwLjIsMCwwL
+                    jUsMCwwLjdjMCwwLjUsMCwxLDAuMywxLjVjMC4zLDAuNSwwLjgsMC44LDEuNCwxDQoJYzAuNywwLjIsMS42LDAuMywyLjgsMC4zSDkxdjg2LjFjM
+                    CwyLTEuNiwzLjctMy41LDMuN0gxOC4xYy0xLjksMC0zLjUtMS42LTMuNS0zLjdWNC4zQzE0LjYsMi4zLDE2LjIsMC43LDE4LjEsMC43eiIvPg0KPH
+                    BhdGggY2xhc3M9InN0MiIgZD0iTTUwLjUsNDMuMWMwLDMuNi0yLjksNi41LTYuNSw2LjVjLTMuNiwwLTYuNS0yLjktNi41LTYuNWMwLTMuNiwyLj
+                    ktNi41LDYuNS02LjVDNDcuNiwzNi42LDUwLjUsMzkuNSw1MC41LDQzLjENCgl6Ii8+DQo8cGF0aCBjbGFzcz0ic3QzIiBkPSJNODIuNCwxMC42Yy
+                    0wLjgsMC0xLjQtMC43LTEuNC0xLjVsLTAuMi03LjdsOS41LDkuMmwtNCwwLjFMODIuNCwxMC42eiIvPg0KPHBhdGggY2xhc3M9InN0MiIgZD0iTT
+                    I2LjYsNjkuMWw1LjgtOC41YzIuMS0zLjEsNS42LTMuMSw3LjcsMGwzLjQsNC44YzIuMywzLjIsNiwzLDguMS0wLjVMNjAsNTAuNWMyLjQtNC4xLD
+                    YuOS00LjQsOS41LTAuNg0KCWw3LjksMTEuMyIvPg0KPC9zdmc+DQo="
+                      style="display: block; width: 5rem; margin: 2rem auto 0px;">
+
+
+                  </div>
+
+                  <div class="text-center mt-3">
+                    <span class="btn" onclick="handleFileUpload()">Upload image</span>
+                    <p>or drag and drop an image</p>
+                    <div class="color-grey50 text-center fs-small lh-small">
+                      Your file might be resized and converted before upload.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="DashboardToolLayout_tool DashboardToolLayout_middleColumn flex-basis-50 mt-3 flex-grow-1">
+              <img id="outputImage" src="data:image/png;base64,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"
+                class="DashboardToolLayout_imgPlaceholder">
+            </section>
+          </div>
+          <section class="DashboardToolLayout_sideColumn">
+            <div class="DashboardToolLayout_rightBar">
+              <div id="imagePreviewSection">
+                <div class="DashboardToolLayout_indicatorFont px-3 py-2 bd bd-grey90 radius-s">
+                  <b>Step 1</b>: Upload the photo you want to edit. Or try one of our images
+                </div>
+          
+                 <div class="p-4" style="background: rgba(212, 212, 212, 0.1);">
+                  <div class="mt-2 d-flex flex-wrap"><img class="radius-s cursor-pointer mr-2 mt-2"
+                      src="/_next/static/images/image-bg-removal-1-thumb-841dff9f2ce80ca2d65df4bb7285e2f8.jpg"
+                      style="height: 4rem; width: auto; opacity: 1; transform: scale(1);">
+                    <img class="radius-s cursor-pointer mr-2 mt-2"
+                      src="/_next/static/images/image-bg-removal-2-thumb-7ae04013260d80eb93368d2e84bed60c.jpg"
+                      style="height: 4rem; width: auto; opacity: 1; transform: scale(1);">
+                    <img class="radius-s cursor-pointer mr-2 mt-2"
+                      src="/_next/static/images/image-bg-removal-3-thumb-517e541914d0f96c002393e13f261488.jpg"
+                      style="height: 4rem; width: auto; opacity: 1; transform: scale(1);">
+                    <img class="radius-s cursor-pointer mr-2 mt-2"
+                      src="/_next/static/images/image-bg-removal-4-thumb-6de22818efd1b4f8fcf6bc7185562476.jpg"
+                      style="height: 4rem; width: auto; opacity: 1; transform: scale(1);">
+                    <img class="radius-s cursor-pointer mr-2 mt-2"
+                      src="/_next/static/images/image-bg-removal-5-thumb-0a8a64363fc400ee4da52dcb97579dd4.jpg"
+                      style="height: 4rem; width: auto; opacity: 1; transform: scale(1);">
+                  </div> 
+              </div>
+
+              <div></div>
+              <span class="btn" onclick="handleDownload()">Download image</span>
+                <style>
+                  .btn {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background-color: #3f4db5;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    transition: background-color 0.3s;
+                  }
+
+                  .btn:hover {
+                    background-color: #3723a4;
+                  }
+                </style> 
+            </div>
+        </div>
+        </section>
+      </div>
+  </div>
+  </main>
+  </div>
+  <script>
+    // Get the input element for file upload
+    const imageFile = document.getElementById('imageFile');
+    const outputImage = document.getElementById('outputImage');
+
+
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/*';
+
+    // Get the preview area element
+    const previewArea = document.querySelector('.demo_fileZone');
+
+    // Add change event listener to the file input
+    fileInput.addEventListener('change', async (event) => {
+      const file = event.target.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+
+        reader.onload = (e) => {
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          previewArea.innerHTML = '';
+          previewArea.appendChild(img);
+        };
+
+        reader.readAsDataURL(file);
+      }
+
+
+      if (file) {
+        const formData = new FormData();
+        formData.append('size', 'auto');
+        formData.append('image_file', file);
+
+
+        const reader = new FileReader();
+
+        // Set up the load event handler for the FileReader
+        reader.onload = (e) => {
+          // Create a new image element
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          img.style.maxWidth = '100%';
+
+          // Clear the previous content of the preview area
+          previewArea.innerHTML = '';
+
+          // Append the new image to the preview area
+          previewArea.appendChild(img);
+
+        }
+
+
+        try {
+          const response = await fetch('https://api.remove.bg/v1.0/removebg', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'X-Api-Key': 'o5PU1WwLgvAsquqgsFXomcfc',
+            },
+          });
+
+          if (response.ok) {
+            const blob = await response.blob();
+            const imageUrl = URL.createObjectURL(blob);
+            console.log(imageUrl)
+            outputImage.src = imageUrl;
+            outputImage.style.display = 'block';
+
+            // Create a download button
+            const downloadBtn = document.createElement('a');
+            downloadBtn.href = imageUrl;
+            downloadBtn.download = 'output-image.png';
+            downloadBtn.textContent = 'Download Image';
+            downloadBtn.classList.add('btn');
+
+            
+
+
+            const previewSection = document.getElementById('imagePreviewSection');
+
+            // Append the download button to the desired section
+           //previewSection.appendChild(downloadBtn);
+
+
+
+            // Append the download button to the body
+            document.body.appendChild(downloadBtn);
+          } else {
+            console.error('Error:', response.status, response.statusText);
+          }
+        } catch (error) {
+          console.error('Request failed:', error);
+        }
+      }
+
+      // Check if a file is selected
+      // if (file) {
+      //   // Create a new FileReader object
+      //   const reader = new FileReader();
+
+      //   // Set up the load event handler for the FileReader
+      //   reader.onload = (e) => {
+      //     // Create a new image element
+      //     const img = document.createElement('img');
+      //     img.src = e.target.result;
+      //     img.style.maxWidth = '100%';
+
+      //     // Clear the previous content of the preview area
+      //     previewArea.innerHTML = '';
+
+      //     // Append the new image to the preview area
+      //     previewArea.appendChild(img);
+      //   };
+
+      //   // Read the file as a data URL
+      //   reader.readAsDataURL(file);
+      // }
+    });
+
+    // Function to trigger the file input dialog
+    function handleFileUpload() {
+      fileInput.click();
+    }
+
+    // Add click event listener to the "Upload image" button
+    const uploadButton = document.querySelector('.btn');
+    // uploadButton.addEventListener('click', handleFileUpload);
+    const body = document.querySelector("body");
+    const darkLight = document.querySelector("#darkLight");
+    const sidebar = document.querySelector(".sidebar");
+    const submenuItems = document.querySelectorAll(".submenu_item");
+    const sidebarOpen = document.querySelector("#sidebarOpen");
+    const sidebarClose = document.querySelector(".collapse_sidebar");
+    const sidebarExpand = document.querySelector(".expand_sidebar");
+    sidebarOpen.addEventListener("click", () => sidebar.classList.toggle("close"));
+
+    sidebarClose.addEventListener("click", () => {
+      sidebar.classList.add("close", "hoverable");
+    });
+    sidebarExpand.addEventListener("click", () => {
+      sidebar.classList.remove("close", "hoverable");
+    });
+
+    sidebar.addEventListener("mouseenter", () => {
+      if (sidebar.classList.contains("hoverable")) {
+        sidebar.classList.remove("close");
+      }
+    });
+    sidebar.addEventListener("mouseleave", () => {
+      if (sidebar.classList.contains("hoverable")) {
+        sidebar.classList.add("close");
+      }
+    });
+
+    darkLight.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        document.setI
+        darkLight.classList.replace("bx-sun", "bx-moon");
+      } else {
+        darkLight.classList.replace("bx-moon", "bx-sun");
+      }
+    });
+
+    submenuItems.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("show_submenu");
+        submenuItems.forEach((item2, index2) => {
+          if (index !== index2) {
+            item2.classList.remove("show_submenu");
+          }
+        });
+      });
+    });
+
+    if (window.innerWidth < 768) {
+      sidebar.classList.add("close");
+    } else {
+      sidebar.classList.remove("close");
+    }
+  </script>
+</body>
+
+</html>

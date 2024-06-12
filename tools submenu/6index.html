@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="2style.css">
+
+</head>
+<body>
+     <!-- navbar -->
+     <nav class="navbar">
+        <div class="logo_item">
+          <i class="bx bx-menu" id="sidebarOpen"></i>
+          <a href="index1.html">
+            <img src="logo.png" alt="ImageLab">ImageLab
+          </a>
+        </div>
+  
+        <div class="search_bar">
+          <input type="text" placeholder="Search" />
+        </div>
+  
+        <div class="navbar_content">
+          <i class="bi bi-grid"></i>
+          <i class='bx bx-sun' id="darkLight"></i>
+          <img src="profile.jpg" alt="" class="profile" />
+        </div>
+      </nav>
+  
+      <!-- sidebar -->
+      <nav class="sidebar">
+        <div class="menu_content">
+          <ul class="menu_items">
+            <li class="item">
+              <div href="#" class="nav_link submenu_item">
+                <span class="navlink_icon">
+                  <i class='bx bxs-dashboard'></i>
+                </span>
+                <span class="navlink">Dashboard</span>
+                
+              </div>
+  
+            <li class="item">
+              <div href="#" class="nav_link submenu_item">
+                <span class="navlink_icon">
+                  <i class='bx bxs-user-account'></i>
+                </span>
+                <span class="navlink">Account</span>
+                <i class="bx bx-chevron-right arrow-left"></i>
+              </div>
+  
+              <ul class="menu_items submenu">
+                <a href="#" class="nav_link sublink">Profile</a>
+                <a href="#" class="nav_link sublink">Settings</a>
+                <a href="#" class="nav_link sublink">Billing</a>
+              </ul>
+            </li>
+            <!-- end -->
+  
+            <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+            <!-- start -->
+            <li class="item">
+              <div href="#" class="nav_link submenu_item">
+                <span class="navlink_icon">
+                  <i class="bx bx-grid-alt"></i>
+                </span>
+                <span class="navlink">Tools</span>
+                <i class="bx bx-chevron-right arrow-left"></i>
+              </div>
+  
+              <ul class="menu_items submenu">
+                <a href="#" class="nav_link sublink">Inpainting</a>
+                <a href="#" class="nav_link sublink">Background Removal</a>
+                <a href="#" class="nav_link sublink">Auto Fix</a>
+                <a href="#" class="nav_link sublink">Style Transfer</a>
+                <a href="#" class="nav_link sublink">Low Light Enhancement</a>
+                <a href="#" class="nav_link sublink">Super Resolution</a>
+                <a href="#" class="nav_link sublink">Auto Image Captioning</a>
+                <a href="#" class="nav_link sublink">Auto Image Tagging</a>
+              </ul>
+            </li>
+            <!-- end -->
+  
+            <!-- start -->
+            <li class="item">
+              <div href="#" class="nav_link submenu_item">
+                <span class="navlink_icon">
+                  <i class='bx bx-data'></i>
+                </span>
+                <span class="navlink">API</span>
+                <i class="bx bx-chevron-right arrow-left"></i>
+              </div>
+  
+              <ul class="menu_items submenu">
+                <a href="#" class="nav_link sublink">Documentation</a>
+                <a href="#" class="nav_link sublink">Pricing</a>
+              </ul>
+            </li>
+            <!-- end -->
+          </ul>
+  
+          <ul class="menu_items">
+            
+            <!-- duplicate these li tag if you want to add or remove navlink only -->
+            <!-- Start -->
+            <li class="item">
+              <a href="#" class="nav_link">
+                <span class="navlink_icon">
+                  <i class='bx bx-log-in'></i>
+                </span>
+                <span class="navlink">Logout</span>
+              </a>
+            </li>
+            <!-- End -->
+  
+  
+          <!-- Sidebar Open / Close -->
+          <div class="bottom_content">
+            <div class="bottom expand_sidebar">
+              <span> Expand</span>
+              <i class='bx bx-log-in' ></i>
+            </div>
+            <div class="bottom collapse_sidebar">
+              <span> Collapse</span>
+              <i class='bx bx-log-out'></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- JavaScript -->
+    
+
+
+    <div class="SidebarLayout_content">
+        <main>
+            <div class="gap-3">
+                <section class="upsection">
+                    <div class="color-primary20">
+                        <div>
+                            <div class="mw480-d-flex align-items-center justify-content-between">
+                                <h1>Auto Fix</h1>
+                                
+                            </div>
+                            <p class="Accordion_description">Without human input, our auto fixing AI is able to 
+                                automate the image enhancement process to produce high quality photography results by applying various visual modifications to images.</p>
+                            </div>
+
+                    </div>
+                </section>
+                <div class="DashboardToolLayout_columnsWrapper">
+                   <div class="DashboardToolLayout_toolsColumnWrapper">
+                <section class="flex-basis-50 mt-3 DashboardToolLayout_tool flex-grow-1">
+                   <div class="mx-a w-100">
+                      <div>
+                         <div class="m-4 d-flex">
+                             <div class="demo_fileZone">
+                                 <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyNS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA5MiAxMTQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDkyIDExNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6I0ZGRkZGRjtzdHJva2U6Izg1NzFGRjt9DQoJLnN0MXtmaWxsOiNGRUZFRkU7c3Ryb2tlOiM4NTcxRkY7fQ0KCS5zdDJ7ZmlsbDpub25lO3N0cm9rZTojODU3MUZGO3N0cm9rZS13aWR0aDoxLjU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO30NCgkuc3Qze2ZpbGw6Izg1NzFGRjtzdHJva2U6Izg1NzFGRjt9DQo8L3N0eWxlPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTUuNSwxMC42aDY3LjVjMi41LDAsNC41LDIsNC41LDQuNXY5My44YzAsMi41LTIsNC41LTQuNSw0LjVINS41Yy0yLjUsMC00LjUtMi00LjUtNC41VjE1LjENCglDMSwxMi42LDMsMTAuNiw1LjUsMTAuNnoiLz4NCjxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xOC4xLDAuN2g1OS40djguNmMwLDAuMywwLDAuNSwwLDAuOGwwLDBjMCwwLjIsMCwwLjUsMCwwLjdjMCwwLjUsMCwxLDAuMywxLjVjMC4zLDAuNSwwLjgsMC44LDEuNCwxDQoJYzAuNywwLjIsMS42LDAuMywyLjgsMC4zSDkxdjg2LjFjMCwyLTEuNiwzLjctMy41LDMuN0gxOC4xYy0xLjksMC0zLjUtMS42LTMuNS0zLjdWNC4zQzE0LjYsMi4zLDE2LjIsMC43LDE4LjEsMC43eiIvPg0KPHBhdGggY2xhc3M9InN0MiIgZD0iTTUwLjUsNDMuMWMwLDMuNi0yLjksNi41LTYuNSw2LjVjLTMuNiwwLTYuNS0yLjktNi41LTYuNWMwLTMuNiwyLjktNi41LDYuNS02LjVDNDcuNiwzNi42LDUwLjUsMzkuNSw1MC41LDQzLjENCgl6Ii8+DQo8cGF0aCBjbGFzcz0ic3QzIiBkPSJNODIuNCwxMC42Yy0wLjgsMC0xLjQtMC43LTEuNC0xLjVsLTAuMi03LjdsOS41LDkuMmwtNCwwLjFMODIuNCwxMC42eiIvPg0KPHBhdGggY2xhc3M9InN0MiIgZD0iTTI2LjYsNjkuMWw1LjgtOC41YzIuMS0zLjEsNS42LTMuMSw3LjcsMGwzLjQsNC44YzIuMywzLjIsNiwzLDguMS0wLjVMNjAsNTAuNWMyLjQtNC4xLDYuOS00LjQsOS41LTAuNg0KCWw3LjksMTEuMyIvPg0KPC9zdmc+DQo=" 
+                                       style="display: block; width: 5rem; margin: 2rem auto 0px;">
+                                    <div class="d-none">
+                            <div class="text-center mt-3"><span class="btn">
+                                 Upload image</span>
+                                <p>or drag and drop an image</p>
+                                <div class="color-grey50 text-center fs-small lh-small">
+                                     Your file might be resized and converted before upload.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </section>
+            <section class="DashboardToolLayout_tool DashboardToolLayout_middleColumn flex-basis-50 mt-3 flex-grow-1">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAOwAAADsAEnxA+
+                tAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAACxZJREFUeJztnW1sW9UZx//Psdu0JF0ZIEIH2kBjEJE4pVPVlVL
+                eNgSDlbEBpraTdIhNrSbKygqMrkucaztlfWEVi2AqRWygtrHbbowWtvJWNgGjbFTr4peS0g+M7QMaEhpvJXFin2cfko7UwY59fe69Jvf
+                8vtnn3Oc+0vnrnuc+5znnAhqNRqPRaDQajUaj0Wg0Go1Go9FoNBqNRqPRaDSaKQWVagz0pBaJPJ9plzMaxXg8b/V1Nv+tVJeiAghFU5s
+                YuEu9Vxo7YYKR6PJFirWLohcCP7DGJY2dEPPyUu1FBQCgXrEvGkegkuPorcDS70Akq/RGYzXM0wB8p9zuZQtgVmM2uHXF/BFTTmlsw7/+
+                4GzvcN175fYvNQVoXIAWgMvRAnA5WgAuRwvA5WgBuBwtAJdTSSLINfiNTIOH5HchcBlJ+JhwCgE5MN5hgaMkaZ/3pPzT2+6ee8xpX6tFC
+                2Ac/vUHZ3uzdV0guQJAAxgAjVsxIzQR41IQfz83KI4FIunNJ83wbvr1PU0fOud1degpYIxALHW5d7huAIQ7ATSUcUk9EXcNZkeOBHpSi6
+                z2zyq0AACEIsk2YjwH4AwTl88hiRdC0XRAtV924HoBhCLpq5noUVQ3HdYx+LFAtP8SRW7ZhqsF0GH0n87Ej0FNLDSdIH7rNzKnKLBlG64
+                WQJ4oDKBRocnTvSTXKrRnOa4VQHBdqpGJ1Fc9EVZ2GP2nK7drEa4VAEu6CUCdBabr8iSus8CuJbhWAMR8tVW2mbDEKtuqca0AGGix0Px5F
+                tpWimsFQObe+cvlCxbaVoprBQBr0+AzLLStFDcL4D8W2n7XQttKcbEA+A2rLBOQscq2atwrAKIXrDLNhBetsq0a1wpA5vO7AVix0UV6If
+                sssGsJrhXATuPCNwB+ygLTe7Z1zX3TAruW4FoBAACR9y4AQwpNZqXMr1For2K8IzMvqqS/qwXQ13XBUYDuVGWPwD8afbI4QzCWXAGWT1Z
+                yjasFAADxcMuvmGlD1YYY6/rCrVsVuFQxhsEiGE3/AkxbUGF+w/UCAIBEd8saBlYBMLP5NcvAqni3r1O1X+XQsam/fkBkHgd4tZnrtQDG
+                SIR9vYCYR6D95V5DwLOQWDB6rf34e/5xZm6QXiLw9WZt6KrgccTDzRkAVwaimXkCMsSEK8Fowiep3SEiHGaJ/ezBrnin76BTvi41+r8qp
+                NgLoPAMp3cAlF2PULMCCEQzXyOWmwFAEt2xM9zyml33ToSbDwE4dPx36OfJzwPAyJcHPth98815u/woRiiSvJ6JdqDgFBci/J3yokMKWXY
+                msiYFEIhm5hHkcyDMAgABfvIW41DTo8a8sg8+UEnfT1v/68R9P41gLHUnMzZi4vT9hGeGbB/KZ73e4fLrXGouBggYh84myD8Ao4M/RuOw
+                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" 
+                class="DashboardToolLayout_imgPlaceholder">
+            </section>
+        </div>
+        <section class="DashboardToolLayout_sideColumn">
+            <div class="DashboardToolLayout_rightBar">
+                <div>
+                    <div class="DashboardToolLayout_indicatorFont px-3 py-2 bd bd-grey90 radius-s">
+                        <b>Step 1</b>: Upload the photo you want to edit. Or try one of our images</div>
+                        <div class="p-4" style="background: rgba(212, 212, 212, 0.1);">
+                            <div class="mt-2 d-flex flex-wrap">
+                                <img class="radius-s cursor-pointer mr-2 mt-2" 
+                                src="/_next/static/images/image-auto-fix-1-thumb-1d718074da184d3ff30c5280328ef03e.jpg" 
+                                style="height: 4rem; width: auto; opacity: 1; transform: scale(1);">
+                                <img class="radius-s cursor-pointer mr-2 mt-2" 
+                                src="/_next/static/images/image-auto-fix-2-thumb-e524bb9b82ee474ead49fd1499ad9644.jpg" 
+                                style="height: 4rem; width: auto; opacity: 1; transform: scale(1);">
+                                <img class="radius-s cursor-pointer mr-2 mt-2" 
+                                src="/_next/static/images/image-auto-fix-3-thumb-f3b10014f812d2ec0816328ff454a856.jpg" 
+                                style="height: 4rem; width: auto; opacity: 1; transform: scale(1);">
+                                <img class="radius-s cursor-pointer mr-2 mt-2" 
+                                src="/_next/static/images/image-auto-fix-4-thumb-9789dda84e43ff6ac68a251e9352554a.jpg" 
+                                style="height: 4rem; width: auto; opacity: 1; transform: scale(1);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    </div>
+</div>
+</main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

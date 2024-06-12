@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>Side Navigation</title>
+    <link rel="stylesheet" href="combined.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <a href="index1.html">
+          <img src="logo.png" alt="ImageLab">ImageLab
+        </a>
+      </div>
+
+      <div class="search_bar">
+        <input type="text" placeholder="Search" />
+      </div>
+
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+        <img src="profile.jpg" alt="" class="profile" />
+      </div>
+    </nav>
+
+    <!-- sidebar -->
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+            <div href="combined.html" class="nav_link submenu_item">
+                <span class="navlink_icon">
+                  <i class='bx bxs-dashboard'></i>
+                </span>
+                <span class="navlink">Dashboard</span>
+                
+              </div>
+          <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class='bx bxs-user-account'></i>
+              </span>
+              <span class="navlink">Account</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+
+            <ul class="menu_items submenu">
+              <a href="#" class="nav_link sublink">Profile</a>
+              <a href="#" class="nav_link sublink">Settings</a>
+              <a href="#" class="nav_link sublink">Billing</a>
+            </ul>
+          </li>
+          <!-- end -->
+
+          <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-grid-alt"></i>
+              </span>
+              <span class="navlink">Tools</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+
+            <ul class="menu_items submenu">
+              <a href="4index.html" class="nav_link sublink">Inpainting</a>
+              <a href="1index.html" class="nav_link sublink">Background Removal</a>
+              <a href="6index.html" class="nav_link sublink">Auto Fix</a>
+              <a href="5index.html" class="nav_link sublink">Style Transfer</a>
+              <a href="7index.html" class="nav_link sublink">Low Light Enhancement</a>
+              <a href="10index.html" class="nav_link sublink">Super Resolution</a>
+              <a href="8index.html" class="nav_link sublink">Auto Image Captioning</a>
+              <a href="9index.html" class="nav_link sublink">Auto Image Tagging</a>
+            </ul>
+          </li>
+          <!-- end -->
+
+          <!-- start -->
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class='bx bx-data'></i>
+              </span>
+              <span class="navlink">API</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+
+            <ul class="menu_items submenu">
+              <a href="#" class="nav_link sublink">Documentation</a>
+              <a href="#" class="nav_link sublink">Pricing</a>
+            </ul>
+          </li>
+          <!-- end -->
+        </ul>
+
+        <ul class="menu_items">
+          
+          <!-- duplicate these li tag if you want to add or remove navlink only -->
+          <!-- Start -->
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class='bx bx-log-in'></i>
+              </span>
+              <span class="navlink">Logout</span>
+            </a>
+          </li>
+          <!-- End -->
+
+
+        <!-- Sidebar Open / Close -->
+        <div class="bottom_content">
+          <div class="bottom expand_sidebar">
+            <span> Expand</span>
+            <i class='bx bx-log-in' ></i>
+          </div>
+          <div class="bottom collapse_sidebar">
+            <span> Collapse</span>
+            <i class='bx bx-log-out'></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- JavaScript -->
+
+    <div class="SidebarLayout_content">
+        <div class="dashboard_gridWrapper">
+            <h1 class="dashboard_title">Check out of AI tools</h1>
+            <div class="dashboard_container">
+                <div class="dashboard_cardWrapper">
+                    <div class="dashboard_card">
+                        <div class="dashboard_overflowHidden">
+                            <div class="dashboard_cover mx-a max-width-640" data-rcs="root" 
+                            style="position: relative; overflow: hidden; user-select: none;">
+                            <img src="integratoin1c-removebg-preview.png" 
+                            data-rcs="image" style="display: block; 
+                            width: 100%; height: 100%; max-width: 100%; 
+                            box-sizing: border-box; object-fit: cover; 
+                            object-position: center center;">
+                            <div data-rcs="clip-item" style="position: absolute; 
+                             top: 0px; left: 0px; width: 100%; height: 100%; 
+                             will-change: clip; user-select: none; 
+                             clip: rect(auto, 167.75px, auto, auto);">
+                             <img src="integratoin1c.png" 
+                             data-rcs="image" style="display: block; width: 100%; 
+                             height: 100%; max-width: 100%; box-sizing: border-box; 
+                             object-fit: cover; object-position: center center;">
+                            </div>
+                            <div data-rcs="handle-container" style="position: absolute; 
+                            top: 0px; width: 100%; height: 100%; pointer-events: none; 
+                            transform: translate3d(167.75px, 0px, 0px);">
+                            <div style="position: absolute; height: 100%; 
+                            transform: translateX(-50%); pointer-events: all;">
+                            <div class="__rcs-handle-root" style="display: flex; 
+                            flex-direction: column; place-items: center; height: 100%; 
+                            cursor: ew-resize; pointer-events: none; 
+                            color: rgb(255, 255, 255);">
+                            <div class="__rcs-handle-line" style="flex-grow: 1; 
+                            height: 100%; width: 2px; background-color: currentcolor; 
+                            pointer-events: auto; box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                            </div>
+                            <div class="__rcs-handle-button" style="display: grid; 
+                            grid-auto-flow: column; gap: 8px; place-content: center; 
+                            flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; 
+                            border-style: solid; border-width: 2px; pointer-events: auto; 
+                            backdrop-filter: blur(7px); box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                            <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                            border-right: 10px solid; border-bottom: 8px solid transparent;">
+                            </div>
+                            <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                            border-right: 10px solid; border-bottom: 8px solid transparent; 
+                            transform: rotate(180deg);"></div></div><div class="__rcs-handle-line" 
+                            style="flex-grow: 1; height: 100%; width: 2px; background-color: currentcolor; 
+                            pointer-events: auto; box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                            </div>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                  </div>
+             <div class="dashboard_content">
+             <span>Photo restoration made easy</span>
+             <div class="dashboard_titleWrapper">
+                <span class="dashboard_cardTitle">Inpainting</span>
+                
+             </div>
+          </div>
+        </div>
+      </div>
+        <div class="dashboard_cardWrapper">
+            <div class="dashboard_card">
+                <div class="dashboard_overflowHidden">
+                    <div class="dashboard_cover mx-a max-width-640" data-rcs="root" 
+                    style="position: relative; overflow: hidden; user-select: none;">
+                    <img src="a123-removebg-preview.png" 
+                    data-rcs="image" style="display: block; width: 100%; height: 100%; 
+                    max-width: 100%; box-sizing: border-box; object-fit: cover; 
+                    object-position: center center;"><div data-rcs="clip-item" 
+                    style="position: absolute; top: 0px; left: 0px; width: 100%; 
+                    height: 100%; will-change: clip; user-select: none; 
+                    clip: rect(auto, 167.75px, auto, auto);">
+                    <img src="a123.jpg" 
+                    data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                    box-sizing: border-box; object-fit: cover; object-position: center center;">
+                    </div>
+                    <div data-rcs="handle-container" style="position: absolute; 
+                    top: 0px; width: 100%; height: 100%; pointer-events: none; 
+                    transform: translate3d(167.75px, 0px, 0px);">
+                    <div style="position: absolute; 
+                    height: 100%; transform: translateX(-50%); pointer-events: all;">
+                     <div class="__rcs-handle-root" style="display: flex; 
+                     flex-direction: column; place-items: center; height: 100%; 
+                     cursor: ew-resize; pointer-events: none; color: rgb(255, 255, 255);">
+                      <div class="__rcs-handle-line" style="flex-grow: 1; 
+                       height: 100%; width: 2px; background-color: currentcolor; 
+                       pointer-events: auto; box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                       </div>
+                          <div class="__rcs-handle-button" style="display: grid; 
+                           grid-auto-flow: column; gap: 8px; place-content: center; 
+                           flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; 
+                           border-style: solid; border-width: 2px; pointer-events: auto; 
+                           backdrop-filter: blur(7px); box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                             <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                               border-right: 10px solid; border-bottom: 8px solid transparent;">
+                             </div>
+                               <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                                 border-right: 10px solid; border-bottom: 8px solid transparent; 
+                                    transform: rotate(180deg);">
+                                 </div>
+                            </div>
+                                <div class="__rcs-handle-line" style="flex-grow: 1; height: 100%; 
+                                   width: 2px; background-color: currentcolor; pointer-events: auto; 
+                                      box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                                </div>
+                       </div>
+                   </div>
+                  </div>
+                </div>
+            </div>
+            <div class="dashboard_content">
+                <span>Remove backgrounds easily</span>
+                <div class="dashboard_titleWrapper">
+                    <span class="dashboard_cardTitle">Background Removal</span>
+                    
+                   </div>
+                  </div>
+                </div>
+       </div>
+            
+       <div class="dashboard_cardWrapper">
+         <div class="dashboard_card">
+            <div class="dashboard_overflowHidden">
+                <div class="dashboard_cover mx-a max-width-640" data-rcs="root" 
+                style="position: relative; overflow: hidden; user-select: none;">
+                <img src="/_next/static/images/people-after-4833e3ec0fb0dc89a334476a9359eedc.jpg" 
+                data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                box-sizing: border-box; object-fit: cover; object-position: center center;">
+                <div data-rcs="clip-item" style="position: absolute; top: 0px; left: 0px; width: 100%; 
+                height: 100%; will-change: clip; user-select: none; clip: rect(auto, 167.75px, auto, auto);">
+                <img src="/_next/static/images/people-before-f185243195932197dc1d4bcf90d24416.jpg" 
+                data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; box-sizing: 
+                border-box; object-fit: cover; object-position: center center;">
+                </div>
+                <div data-rcs="handle-container" style="position: absolute; top: 0px; 
+                width: 100%; height: 100%; pointer-events: none; transform: translate3d(167.75px, 0px, 0px);">
+                <div style="position: absolute; height: 100%; transform: translateX(-50%); pointer-events: all;">
+                    <div class="__rcs-handle-root" style="display: flex; flex-direction: 
+                    column; place-items: center; height: 100%; cursor: ew-resize; pointer-events: none; 
+                    color: rgb(255, 255, 255);">
+                    <div class="__rcs-handle-line" 
+                    style="flex-grow: 1; height: 100%; width: 2px; background-color: 
+                    currentcolor; pointer-events: auto; box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                    </div>
+                    <div class="__rcs-handle-button" style="display: grid; grid-auto-flow: column; 
+                    gap: 8px; place-content: center; flex-shrink: 0; width: 56px; height: 56px; 
+                    border-radius: 50%; border-style: solid; border-width: 2px; 
+                    pointer-events: auto; backdrop-filter: blur(7px); 
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                    <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                    border-right: 10px solid; border-bottom: 8px solid transparent;">
+                    </div>
+                    <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                    border-right: 10px solid; border-bottom: 8px solid transparent; 
+                    transform: rotate(180deg);">
+                    </div>
+                </div>
+                <div class="__rcs-handle-line" style="flex-grow: 1; height: 100%; 
+                width: 2px; background-color: currentcolor; pointer-events: auto; 
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+          </div>
+         <div class="dashboard_content">
+            <span>Image enhancement made easy!</span>
+            <div class="dashboard_titleWrapper">
+                <span class="dashboard_cardTitle">Auto Fix</span>
+                
+              </div>
+           </div>
+          </div>
+        </div>
+        
+        <div class="dashboard_cardWrapper">
+            <div class="dashboard_card">
+                <div class="dashboard_overflowHidden">
+                    <div class="dashboard_cover mx-a max-width-640" data-rcs="root" 
+                     style="position: relative; overflow: hidden; user-select: none;">
+                      <img src="/_next/static/images/product-after-5299946f997fc12160094a341f422db6.jpg" 
+                      data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                      box-sizing: border-box; object-fit: cover; object-position: center center;">
+                     <div data-rcs="clip-item" style="position: absolute; top: 0px; left: 0px; 
+                      width: 100%; height: 100%; will-change: clip; user-select: none; 
+                      clip: rect(auto, 167.75px, auto, auto);">
+                      <img src="/_next/static/images/product-before-49c8913bb5892cd81e732744254deb23.jpg" 
+                      data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                      box-sizing: border-box; object-fit: cover; object-position: center center;">
+                      </div>
+                    <div data-rcs="handle-container" style="position: absolute; top: 0px; 
+                    width: 100%; height: 100%; pointer-events: none; transform: translate3d(167.75px, 0px, 0px);">
+                    <div style="position: absolute; height: 100%; transform: translateX(-50%); 
+                    pointer-events: all;"><div class="__rcs-handle-root" style="display: flex; 
+                    flex-direction: column; place-items: center; height: 100%; cursor: ew-resize; 
+                    pointer-events: none; color: rgb(255, 255, 255);">
+                    <div class="__rcs-handle-line" style="flex-grow: 1; height: 100%; 
+                    width: 2px; background-color: currentcolor; pointer-events: auto; 
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                    </div>
+                    <div class="__rcs-handle-button" style="display: grid; grid-auto-flow: 
+                    column; gap: 8px; place-content: center; flex-shrink: 0; width: 56px; 
+                    height: 56px; border-radius: 50%; border-style: solid; border-width: 2px; 
+                    pointer-events: auto; backdrop-filter: blur(7px); box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                    <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                    border-right: 10px solid; border-bottom: 8px solid transparent;">
+                    </div>
+                    <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                    border-right: 10px solid; border-bottom: 8px solid transparent; 
+                    transform: rotate(180deg);"></div></div><div class="__rcs-handle-line" 
+                    style="flex-grow: 1; height: 100%; width: 2px; background-color: currentcolor; 
+                    pointer-events: auto; box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                    </div>
+                   </div>
+                  </div> 
+                 </div>
+                </div> 
+               </div>
+               <div class="dashboard_content">
+                <span>Brighter, more beautiful images in seconds!</span>
+                <div class="dashboard_titleWrapper">
+                    <span class="dashboard_cardTitle">Low Light Enhancement</span>
+                    
+                </div>
+              </div>
+             </div>
+        </div>
+            
+        <div class="dashboard_cardWrapper">
+            <div class="dashboard_card">
+                <div class="dashboard_overflowHidden">
+                    <div class="dashboard_cover mx-a max-width-640" data-rcs="root" 
+                    style="position: relative; overflow: hidden; user-select: none;">
+                    <img src="/_next/static/images/product-after-f62053c9f391714e11a750e6d35ecda6.jpg" 
+                    data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                    box-sizing: border-box; object-fit: cover; object-position: center center;">
+                    <div data-rcs="clip-item" style="position: absolute; top: 0px; left: 0px; width: 100%; 
+                    height: 100%; will-change: clip; user-select: none; clip: rect(auto, 167.75px, auto, auto);">
+                    <img src="/_next/static/images/product-before-12bcb3321a1c5abfdc6f0a885eaca8ad.jpg" 
+                    data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                    box-sizing: border-box; object-fit: cover; object-position: center center;">
+                    </div>
+                    <div data-rcs="handle-container" style="position: absolute; top: 0px; 
+                    width: 100%; height: 100%; pointer-events: none; transform: translate3d(167.75px, 0px, 0px);">
+                    <div style="position: absolute; height: 100%; transform: translateX(-50%); pointer-events: all;">
+                        <div class="__rcs-handle-root" style="display: flex; flex-direction: 
+                        column; place-items: center; height: 100%; cursor: ew-resize; pointer-events: none; 
+                        color: rgb(255, 255, 255);">
+                        <div class="__rcs-handle-line" style="flex-grow: 1; height: 100%; 
+                        width: 2px; background-color: currentcolor; pointer-events: auto; 
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                        </div>
+                        <div class="__rcs-handle-button" style="display: grid; grid-auto-flow: column; 
+                        gap: 8px; place-content: center; flex-shrink: 0; width: 56px; height: 56px; 
+                        border-radius: 50%; border-style: solid; border-width: 2px; pointer-events: auto; 
+                        backdrop-filter: blur(7px); box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                        <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                        border-right: 10px solid; border-bottom: 8px solid transparent;">
+                        </div>
+                        <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                        border-right: 10px solid; border-bottom: 8px solid transparent; 
+                        transform: rotate(180deg);">
+                        </div>
+                    </div>
+                    <div class="__rcs-handle-line" style="flex-grow: 1; height: 100%; width: 2px; 
+                    background-color: currentcolor; pointer-events: auto; 
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                    </div>
+                   </div>
+                  </div>
+                 </div> 
+                </div> 
+               </div>
+               <div class="dashboard_content">
+                <span>Upscale &amp; resize images</span>
+                <div class="dashboard_titleWrapper">
+                    <span class="dashboard_cardTitle">Super Resolution</span>
+                    
+                   </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard_cardWrapper">
+            <div class="dashboard_card">
+                <div class="dashboard_overflowHidden">
+                    <div class="dashboard_cover mx-a max-width-640" data-rcs="root" 
+                    style="position: relative; overflow: hidden; user-select: none;">
+                    <img src="/_next/static/images/product-after-a52c090166cb1d40ef53c291b07401fe.jpg" 
+                    data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                    box-sizing: border-box; object-fit: cover; object-position: center center;">
+                    <div data-rcs="clip-item" style="position: absolute; top: 0px; left: 0px; width: 100%; 
+                    height: 100%; will-change: clip; user-select: none; clip: rect(auto, 167.75px, auto, auto);">
+                    <img src="/_next/static/images/product-before-4797120f0817665c9fd1f57086bacd6c.jpg" 
+                    data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                    box-sizing: border-box; object-fit: cover; object-position: center center;">
+                    </div>
+                    <div data-rcs="handle-container" style="position: absolute; top: 0px; 
+                    width: 100%; height: 100%; pointer-events: none; transform: translate3d(167.75px, 0px, 0px);">
+                    <div style="position: absolute; height: 100%; transform: translateX(-50%); pointer-events: all;">
+                        <div class="__rcs-handle-root" style="display: flex; flex-direction: column; 
+                        place-items: center; height: 100%; cursor: ew-resize; pointer-events: none; 
+                        color: rgb(255, 255, 255);"><div class="__rcs-handle-line" style="flex-grow: 1; 
+                        height: 100%; width: 2px; background-color: currentcolor; pointer-events: auto; 
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                        </div>
+                        <div class="__rcs-handle-button" 
+                        style="display: grid; grid-auto-flow: column; gap: 8px; place-content: center; 
+                        flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; border-style: solid; 
+                        border-width: 2px; pointer-events: auto; backdrop-filter: blur(7px); 
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;"><div style="width: 0px; height: 0px; 
+                        border-top: 8px solid transparent; border-right: 10px solid; 
+                        border-bottom: 8px solid transparent;"></div><div style="width: 0px; height: 0px; 
+                        border-top: 8px solid transparent; border-right: 10px solid; 
+                        border-bottom: 8px solid transparent; transform: rotate(180deg);">
+                        </div>
+                       </div>
+                       <div class="__rcs-handle-line" style="flex-grow: 1; height: 100%; width: 2px; 
+                       background-color: currentcolor; pointer-events: auto; 
+                       box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                       </div>
+                      </div>
+                     </div>
+                    </div> 
+                   </div>
+                </div>
+                <div class="dashboard_content">
+                    <span>Recreate masterpieces effortlessly</span>
+                    <div class="dashboard_titleWrapper">
+                        <span class="dashboard_cardTitle">Style Tranfer</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard_cardWrapper">
+            <div class="dashboard_card">
+                <div class="dashboard_overflowHidden">
+                    <div class="dashboard_cover mx-a max-width-640" data-rcs="root" 
+                    style="position: relative; overflow: hidden; user-select: none;">
+                    <img src="/_next/static/images/landscape-after-a31a5df1e82925cd064fce37f12b7a00.jpg" 
+                    data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                    box-sizing: border-box; object-fit: cover; object-position: center center;">
+                    <div data-rcs="clip-item" style="position: absolute; top: 0px; left: 0px; 
+                    width: 100%; height: 100%; will-change: clip; user-select: none; 
+                    clip: rect(auto, 167.75px, auto, auto);">
+                    <img src="/_next/static/images/landscape-before-8ba7368d6d8a57ff4e9e9a86062105cc.jpg" 
+                    data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                    box-sizing: border-box; object-fit: cover; object-position: center center;">
+                    </div>
+                    <div data-rcs="handle-container" style="position: absolute; top: 0px; width: 100%; 
+                    height: 100%; pointer-events: none; transform: translate3d(167.75px, 0px, 0px);">
+                    <div style="position: absolute; height: 100%; transform: translateX(-50%); pointer-events: all;">
+                        <div class="__rcs-handle-root" style="display: flex; flex-direction: column; 
+                        place-items: center; height: 100%; cursor: ew-resize; pointer-events: none; 
+                        color: rgb(255, 255, 255);">
+                        <div class="__rcs-handle-line" style="flex-grow: 1; height: 100%; width: 2px; 
+                        background-color: currentcolor; pointer-events: auto; 
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                        </div>
+                        <div class="__rcs-handle-button" style="display: grid; grid-auto-flow: column; 
+                        gap: 8px; place-content: center; flex-shrink: 0; width: 56px; height: 56px; 
+                        border-radius: 50%; border-style: solid; border-width: 2px; pointer-events: auto; 
+                        backdrop-filter: blur(7px); box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                        <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                        border-right: 10px solid; border-bottom: 8px solid transparent;">
+                        </div>
+                        <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                        border-right: 10px solid; border-bottom: 8px solid transparent; transform: rotate(180deg);">
+                        </div>
+                       </div>
+                       <div class="__rcs-handle-line" style="flex-grow: 1; height: 100%; width: 2px; 
+                       background-color: currentcolor; pointer-events: auto; 
+                       box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="dashboard_content">
+                    <span>Caption all your images</span>
+                    <div class="dashboard_titleWrapper">
+                        <span class="dashboard_cardTitle">Auto Image Captioning</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard_cardWrapper">
+            <div class="dashboard_card">
+                <div class="dashboard_overflowHidden">
+                    <div class="dashboard_cover mx-a max-width-640" data-rcs="root" 
+                    style="position: relative; overflow: hidden; user-select: none;">
+                    <img src="/_next/static/images/landscape-after-d5b5d9b498903f930d456a0856338c87.jpg" 
+                    data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                    box-sizing: border-box; object-fit: cover; object-position: center center;">
+                    <div data-rcs="clip-item" style="position: absolute; top: 0px; left: 0px; width: 100%; 
+                    height: 100%; will-change: clip; user-select: none; clip: rect(auto, 167.75px, auto, auto);">
+                    <img src="/_next/static/images/landscape-before-2a052dcc99433d763e84f501e90041c3.jpg" 
+                    data-rcs="image" style="display: block; width: 100%; height: 100%; max-width: 100%; 
+                    box-sizing: border-box; object-fit: cover; object-position: center center;">
+                    </div>
+                    <div data-rcs="handle-container" style="position: absolute; top: 0px; width: 100%; 
+                    height: 100%; pointer-events: none; transform: translate3d(167.75px, 0px, 0px);">
+                    <div style="position: absolute; height: 100%; transform: translateX(-50%); pointer-events: all;">
+                        <div class="__rcs-handle-root" style="display: flex; flex-direction: column; 
+                        place-items: center; height: 100%; cursor: ew-resize; pointer-events: none; 
+                        color: rgb(255, 255, 255);"><div class="__rcs-handle-line" style="flex-grow: 1; 
+                        height: 100%; width: 2px; background-color: currentcolor; pointer-events: auto; 
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                        </div>
+                        <div class="__rcs-handle-button" style="display: grid; grid-auto-flow: column; 
+                        gap: 8px; place-content: center; flex-shrink: 0; width: 56px; height: 56px; 
+                        border-radius: 50%; border-style: solid; border-width: 2px; pointer-events: auto; 
+                        backdrop-filter: blur(7px); box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                        <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                        border-right: 10px solid; border-bottom: 8px solid transparent;">
+                        </div>
+                        <div style="width: 0px; height: 0px; border-top: 8px solid transparent; 
+                        border-right: 10px solid; border-bottom: 8px solid transparent; transform: rotate(180deg);">
+                        </div>
+                        </div>
+                        <div class="__rcs-handle-line" style="flex-grow: 1; height: 100%; width: 2px; 
+                        background-color: currentcolor; pointer-events: auto; 
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 7px;">
+                        </div>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="dashboard_content">
+                    <span>Tag your images instantly</span>
+                    <div class="dashboard_titleWrapper">
+                        <span class="dashboard_cardTitle">Auto Image Tagging</span>
+                       
+                     </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+      const handleContainers = document.querySelectorAll('[data-rcs="handle-container"]');
+
+handleContainers.forEach((container) => {
+  const clipItem = container.parentElement.querySelector('[data-rcs="clip-item"]');
+  const handleRoot = container.querySelector('.__rcs-handle-root');
+  const handleButton = handleRoot.querySelector('.__rcs-handle-button');
+  const coverElement = container.closest('.dashboard_cover');
+
+  let isDragging = false;
+  let currentX = 0;
+  let initialX;
+  let maxX = coverElement.offsetWidth - handleRoot.offsetWidth;
+
+  const handleMouseDown = (e) => {
+    initialX = e.clientX - currentX;
+    isDragging = true;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+
+    let newX = e.clientX - initialX;
+    newX = Math.max(0, Math.min(newX, maxX));
+    currentX = newX;
+    handleRoot.style.transform = `translateX(${currentX}px)`;
+
+    const clipWidth = currentX;
+    clipItem.style.clip = `rect(auto, ${coverElement.offsetWidth - clipWidth}px, auto, ${clipWidth}px)`;
+  };
+
+  const handleMouseUp = () => {
+    isDragging = false;
+  };
+
+  handleButton.addEventListener('mousedown', handleMouseDown);
+  document.addEventListener('mousemove', handleMouseMove);
+  document.addEventListener('mouseup', handleMouseUp);
+});
+    </script>
+    
+
+    <script src="combined.js"></script>
+  </body>
+</html>

@@ -96,7 +96,7 @@ body.dark {
 /* sidebar */
 .sidebar {
   background-color: var(--white-color);
-  width: 260px;
+  width: 290px;
   position: fixed;
   top: 0;
   left: 0;
@@ -270,4 +270,129 @@ body.dark {
   .sidebar.close .bottom_content {
     left: -100%;
   }
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+.SidebarLayout_content h1 {
+  color: #4d4d4d;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.SidebarLayout_content section {
+  background: var(--color-white);
+  box-shadow: 0 .25rem .5rem rgba(0, 0, 0, .1);
+  border-radius: 5px;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+
+
+/* Main Content */
+.upsection {
+  margin-top: 90px;
+  margin-left: 300px;
+  margin-right: 50px;
+}
+
+
+.gap-3 {
+  gap: 1rem;
+}
+
+.DashboardToolLayout_columnsWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 1500px;
+}
+
+.DashboardToolLayout_toolsColumnWrapper {
+  margin-left: 300px;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+}
+
+.DashboardToolLayout_tool {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --demo-border-color: transparent;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.demo_fileZone {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.demo_fileZone img {
+  max-width: 100px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #8571ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.color-grey50 {
+  color: #8b8b8b;
+  font-size: 12px;
+}
+
+.DashboardToolLayout_imgPlaceholder {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  margin: 0 auto;
+}
+
+/* Sidebar */
+.DashboardToolLayout_indicatorFont {
+  background-color: #ffffff;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #404040;
+  margin-bottom: 20px;
+}
+
+.DashboardToolLayout_rightBar img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.DashboardToolLayout_rightBar img:hover {
+  opacity: 1;
 }
